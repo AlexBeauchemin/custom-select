@@ -1,0 +1,53 @@
+.custom-select-input {
+    background: #ffffff url("../images/arrow-right.png") no-repeat right 15px;
+    color: #486B94;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 5px 10px;
+    position: relative;
+    text-align: left;
+    zoom: 1;
+}
+.custom-select-input.down {
+    background-image: url("../images/arrow-down.png");
+}
+.custom-select-input.required span {
+    font-size: 12px;
+    line-height: 12px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+.custom-select-container {
+    background: #486B94;
+    left: 0;
+    max-height: 400px;
+    max-width: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    z-index: 10;
+}
+.custom-select-container ul {
+    margin: 0;
+    padding: 0;
+}
+.custom-select-container ul li {
+    border-bottom: 1px solid #36506F;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.custom-select-container ul li a {
+    color: #fff;
+    display: block;
+    line-height: 28px;
+    padding: 5px 15px;
+    text-decoration: none;
+    width: 100%;
+}

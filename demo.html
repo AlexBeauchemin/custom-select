@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html" style="background-color: #eee;">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+    <title>Demo</title>
+	<link type="text/css" rel="stylesheet" href="assets/css/custom-select.css"/>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+</head>
+
+<body style=" padding: 10px 20px;">
+
+	<h1>Custom select demo</h1><br>
+
+	<div style="display: inline-block; padding-right: 40px;">
+		<select id="custom-select-default" name="test1" class="default">
+			<option value="1">Item #1</option>
+			<option value="2" selected>Item #2</option>
+			<option value="3">Item #3</option>
+			<option value="4">Item with longer name</option>
+		</select>
+	</div>
+	<div style="display: inline-block; padding-right: 40px;">
+		<select id="custom-select-down" name="test2" class="down" required>
+			<option value="1">Item #1</option>
+			<option value="2" selected>Item #2</option>
+			<option value="3">Item #3</option>
+			<option value="4">Item with longer name</option>
+		</select>
+	</div>
+
+	<script src="custom-select.js"></script>
+	<script>
+		$(function() {
+			//Default
+			$.CustomSelect();
+
+			//Custom options
+			var options = {
+				closeTimeout: 500,
+				defaultElement: 'last', // last,first or a value
+				direction: 'down', //right or down
+				maxWidth: 200, //int or false/null for no limit
+				exclude: null //list of select to exclude
+			};
+			$.CustomSelect('select.down',options);
+		});
+	</script>
+</body>
+</html>

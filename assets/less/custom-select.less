@@ -1,0 +1,66 @@
+@color1: #486B94;
+@color2: #fff;
+@color3: #36506F;
+
+.custom-select-input {
+    background: @color2 url("../images/arrow-right.png") no-repeat right 15px;
+    color: @color1;
+    cursor: pointer;
+    display: block;
+    font-size: 20px;
+    line-height: 28px;
+    padding: 5px 10px;
+    position: relative;
+    text-align: left;
+    zoom: 1;
+
+    &.down {
+        background-image: url("../images/arrow-down.png")
+    }
+
+    &.required {
+
+        span {
+            font-size: 12px;
+            line-height: 12px;
+            position: absolute;
+            top: 5px;
+            right: 5px;
+        }
+    }
+}
+
+.custom-select-container {
+    background: @color1;
+    left: 0;
+    max-height: 400px;
+    max-width: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    position: absolute;
+    text-align: left;
+    top: 0;
+    z-index: 10;
+
+    ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+            border-bottom: 1px solid @color3;
+            display: block;
+            margin: 0;
+            padding: 0;
+            width: 100%;
+
+            a {
+                color: @color2;
+                display: block;
+                line-height: 28px;
+                padding: 5px 15px;
+                text-decoration: none;
+                width: 100%;
+            }
+        }
+    }
+}
